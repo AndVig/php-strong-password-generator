@@ -38,7 +38,7 @@ function generatePassword($lungezza){
             <div class="input-group my-4">
                 <label for="lunghezza">Metti la lunghezza della password da generare:</label>
                 <input type="number" name="lunghezza" min="5" max="20" class="form-control mx-2" id="lunghezza" placeholder="Lunghezza">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Invia</button>
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Invia</button>
             </div>
             <div><?php echo " La tua password è: $my_password" ?></div>
         </form>
