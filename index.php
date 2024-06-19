@@ -1,5 +1,21 @@
 
+<?php
+$my_password='';
 
+if (isset($_GET['lunghezza'])){
+    $lungezza=$_GET['lunghezza'];
+    $my_password=generatePassword($lungezza);
+}
+
+function generatePassword($lungezza){
+    $chars='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!?~@#-_+<>[]{}';
+    $pw='';
+    for ($i=0; $i<$lungezza; $i++ ){
+        $pw.=$chars[rand(0,strlen($chars)-1)];
+    }
+    return $pw;
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
